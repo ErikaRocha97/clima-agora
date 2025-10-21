@@ -10,9 +10,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const form = document.querySelector("#search-form > form");
 const input = document.querySelector("#input-localizacao");
+const sectionTempoInfo = document.querySelector("#tempo-info");
 form === null || form === void 0 ? void 0 : form.addEventListener("submit", (event) => __awaiter(void 0, void 0, void 0, function* () {
     event.preventDefault();
-    if (!input)
+    if (!input || !sectionTempoInfo)
         return;
     const localizacao = input.value;
     if (localizacao.length < 3) {
@@ -26,7 +27,14 @@ form === null || form === void 0 ? void 0 : form.addEventListener("submit", (eve
     const infos = {
         temperatura: Math.round(dados.main.temp),
         local: dados.name,
-        icone: `http://openweathermap.org/img/wn/${dados.weather.icon}@2x.png`,
+        icone: `http://openweathermap.org/img/wn/${dados.weather[0].icon}@2x.png`,
     };
+    sectionTempoInfo.innerHTML = `
+    <div class="tempo-dados">
+      <h2>${infos.local}</h2>
+      <span>${infos.temperatura}°C</span>
+    </div>
+    <img src="${infos.icone}" />
+  `;
 }));
 //# sourceMappingURL=index.js.map
