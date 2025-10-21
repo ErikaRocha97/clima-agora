@@ -15,9 +15,9 @@
 
 ## Tecnologias utilizadas
 
-- **HTML5** e **CSS3**  
-- **TypeScript**  
-- **Fetch API** para requisições HTTP  
+- **HTML5** e **CSS3**
+- **TypeScript**
+- **Fetch API** para requisições HTTP
 - **OpenWeather API** para dados meteorológicos
 
 ---
@@ -26,15 +26,21 @@
 
 1. Clone o repositório:
 
-```bash git clone https://github.com/seu-usuario/clima-agora.git```
+```bash
+git clone https://github.com/ErikaRocha97/clima-agora.git
+```
 
 2. Instale as dependências (se houver, como TypeScript):
 
-```bash npm install```
+```bash
+npm install
+```
 
 3. Compile o TypeScript para JavaScript:
 
-```bash tsc --watch```
+```bash 
+tsc --watch
+```
 
 4. Abra o arquivo index.html no navegador.
 
