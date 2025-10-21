@@ -1,1 +1,0 @@
-// configurar ts. Criar projeto Node.

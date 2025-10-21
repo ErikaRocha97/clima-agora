@@ -1,44 +1,26 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    "outDir": "./js",
+    // Pastas
+    "outDir": "./js", // JS compilado vai para a pasta js
+    "rootDir": "./ts", // pasta onde ficam os arquivos TS
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    // Configuração do JS gerado
+    "module": "ES6", // ES Modules, para usar import/export no navegador
+    "target": "ES6", // versão JS gerada
+    "sourceMap": true, // gera .map para depuração
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
+    // Typechecking rigoroso
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
+    // Interoperabilidade
+    "esModuleInterop": true,
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
+
+    // Ignorar checagem de bibliotecas externas
     "skipLibCheck": true
-  }
+  },
+  "include": ["ts/**/*"] // quais arquivos TypeScript compilar
 }
