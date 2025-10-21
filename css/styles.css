@@ -37,6 +37,8 @@ main #search-form input {
   height: 32px;
   border-radius: 5px;
   border: none;
+  padding: 0px 10px;
+  font-size: 16px;
 }
 
 main #search-form button {
